@@ -1,0 +1,48 @@
+﻿@page
+@model BonayogDianaMae.SaveJsonFile.Pages.FormModel
+@{
+}
+@Model.ViewModel?.FirstName
+
+<form method="Post">
+
+    <div class="form-group">
+        <label asp-for="ViewModel.StudentNumber"></label>
+        <input type="number" class="form-control" id="studentNumber" aria-describedby="studentNumberNote" placeholder="Student Number">
+        <small id="studentNumberNote" class="form-text text-muted">Please enter your Student Number.</small>
+    </div>
+    <div class="form-group">
+        <label asp-for="ViewModel.FirstName"></label>
+        <input type="text" class="form-control" id="firstName" aria-describedby="firstNameNote" placeholder="First Name">
+        <small id="firstNameNote" class="form-text text-muted">Please enter your First Name.</small>
+    </div>
+    <div class="form-group">
+        <label asp-for="ViewModel.LastName"></label>
+        <input type="text" class="form-control" id="lastName" aria-describedby="lastNameNote" placeholder="Last Name">
+        <small id="lastNameNote" class="form-text text-muted">Please enter your Last Name.</small>
+    </div>
+    <div class="form-group">
+        <label asp-for="ViewModel.DateofBirth"></label>
+        <input type="date" class="form-control" id="dateofBirth" aria-describedby="dateofBirthNote" placeholder="Date of Birth">
+        <small id="dateofBirthNote" class="form-text text-muted">Please enter your Date of Birth.</small>
+    </div>
+    <div class="form-group">
+        <label asp-for="ViewModel.YearLevel"></label>
+        <input type="number" class="form-control" id="yearLevel" aria-describedby="yearLevelNote" placeholder="Year Level">
+        <small id="yearLevelNote" class="form-text text-muted">Please enter your Year Level.</small>
+    </div>
+    <div class="form-group">
+        <label asp-for="ViewModel.Course"></label>
+        <select class="form-control">
+            <option value="BSIS">BSIS/ACT </option>
+            <option value="BSIS">BSTM </option>
+            <option value="BSIS">BSCA </option>
+            <option value="BSIS">BSCRIM </option>
+            <option value="BSIS">BSBA </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+    </form>
